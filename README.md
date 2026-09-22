@@ -1,6 +1,6 @@
 # Hospital Management System 🏥
 
-A secure REST API built with Spring Boot to manage daily hospital operations like patients, doctors, and appointments.
+A robust, secure, and scalable backend RESTful API designed to manage daily hospital operations. This system handles user authentication, patient records, doctor profiles, and appointments, built with a strict focus on clean architecture and security.
 
 ## 🚀 Tech Stack
 **Java 26** | **Spring Boot 4.1.1** | **MySQL** | **Spring Security + JWT**
