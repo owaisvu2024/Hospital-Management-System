@@ -1,0 +1,15 @@
+package com.Hospital_Managment.demo.Dto;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+
+@Data
+
+public class RegisterDto {
+   @NotBlank(message="Username is required")
+    private String username;
+    @NotBlank(message="Password is required")
+    private String password;
+
+    private String role;
+}
