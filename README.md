@@ -1,20 +1,19 @@
-# Hospital Management System 🏥
+# Hospital Management System
 
-A robust, secure, and scalable backend RESTful API designed to manage daily hospital operations. This system handles user authentication, patient records, doctor profiles, and appointments, built with a strict focus on clean architecture and security.
+Spring Boot REST API with JWT Authentication for managing hospital operations.
 
-## 🚀 Tech Stack
-**Java 26** | **Spring Boot 4.1.1** | **MySQL** | **Spring Security + JWT**
+## Features
+- Patient, Doctor, Department, Insurance, Appointment management (CRUD)
+- One-to-One, One-to-Many, Many-to-Many relationships
+- JWT-based Authentication & Authorization
+- Input validation and centralized exception handling
+- MySQL database with Spring Data JPA
 
-## ⚙️ How to Run
-1. Create an `application.properties` file in `src/main/resources/` with your local database details:
+## Tech Stack
+- Java, Spring Boot, Spring Security, Spring Data JPA
+- MySQL, Maven, JWT (jjwt)
 
-spring.datasource.url=jdbc:mysql://localhost:3306/Hospital_Managment?createDatabaseIfNotExist=true
-spring.datasource.username=YOUR_USERNAME
-spring.datasource.password=YOUR_PASSWORD
-spring.jpa.hibernate.ddl-auto=update
-
-2. Start the application. It will run on `http://localhost:8084`.
-
-## 🔐 Security & Authentication
-* Send your username and password to `POST /login` to receive a secure JWT token.
-* Include this token in the header as `Authorization: Bearer <token>` to access all other secured endpoints in the system.
+## How to Run
+1. Clone repository
+2. Configure `application.properties` with your MySQL credentials
+3. Run `mvn spring-boot:run`
