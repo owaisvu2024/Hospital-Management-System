@@ -1,0 +1,41 @@
+package com.Hospital_System.demo.Controller;
+
+import com.Hospital_System.demo.Dto.UserDto;
+import com.Hospital_System.demo.Entity.UserEntity;
+import com.Hospital_System.demo.Repository.UserRepo;
+import com.Hospital_System.demo.Servics.UserService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/auth")
+public class UserController {
+    @Autowired
+    private UserService userService;
+
+    @PostMapping("/signup")
+    public ResponseEntity<String> signup(@Valid @RequestBody UserDto userDto){
+
+        UserEntity userEntity = userService.signup(userDto);
+
+        return new ResponseEntity<>("Signup Successfully", HttpStatus.OK);
+
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<String>  login(@RequestBody UserDto userDto){
+
+        return ResponseEntity.ok(userService.login(userDto));
+
+    }
+
+
+
+}
+
