@@ -41,7 +41,7 @@ A secure backend system built with **Spring Boot** and **MySQL** to manage hospi
 ## 🚀 How to Run Locally
 1. **Clone repo:**
    ```bash
-   git clone [https://github.com/owaisvu2024/Hospital-Management-System.git](https://github.com/owaisvu2024/Hospital-Management-System.git)
+git clone [https://github.com/owaisvu2024/Hospital-Management-System.git](https://github.com/owaisvu2024/Hospital-Management-System.git)
 
 1. Configure Database:
 Update your database credentials in src/main/resources/application.properties:
